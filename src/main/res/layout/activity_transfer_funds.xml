@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".transferFunds">
+
+    <TextView
+        android:id="@+id/txtTransferToFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Transfer to/ from Accounts"
+        android:textColor="#2C3D7A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.071"
+        app:textAllCaps="false" />
+
+    <TextView
+        android:id="@+id/txtCurrentBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Account Balance: "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTransferToFrom"
+        app:layout_constraintVertical_bias="0.066" />
+
+    <TextView
+        android:id="@+id/txtSavingsBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Savings Account Balance: "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCurrentBalance"
+        app:layout_constraintVertical_bias="0.093" />
+
+    <TextView
+        android:id="@+id/txtTransferAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="52dp"
+        android:text="Enter Transfer Amount: "
+        app:layout_constraintEnd_toStartOf="@+id/etTransferAmount"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSavingsBalance" />
+
+    <EditText
+        android:id="@+id/etTransferAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="R"
+        app:layout_constraintBottom_toTopOf="@+id/txtFromAccount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSavingsBalance"
+        app:layout_constraintVertical_bias="0.469" />
+
+    <TextView
+        android:id="@+id/txtFromAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Transfer from: "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTransferAmount"
+        app:layout_constraintVertical_bias="0.138" />
+
+    <Button
+        android:id="@+id/btnTransferBetween"
+        android:layout_width="341dp"
+        android:layout_height="46dp"
+        android:text="Transfer"
+        android:background="#2270AE"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.342"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtFromAccount"
+        app:layout_constraintVertical_bias="0.271" />
+
+    //Spinner to transfer between Current and Savings
+    <Spinner
+        android:id="@+id/transferSpinner"
+        android:layout_width="147dp"
+        android:layout_height="19dp"
+        android:entries="@array/items_class"
+        app:layout_constraintBottom_toTopOf="@+id/btnTransferBetween"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.539"
+        app:layout_constraintStart_toEndOf="@+id/txtFromAccount"
+        app:layout_constraintTop_toBottomOf="@+id/etTransferAmount"
+        app:layout_constraintVertical_bias="0.365" />
+    app:layout_constraintBottom_toTopOf="@+id/btnTransfer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.395"
+        app:layout_constraintStart_toEndOf="@+id/txtFromAccount"
+        app:layout_constraintTop_toBottomOf="@+id/pltTransferAmount"
+        app:layout_constraintVertical_bias="0.365" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

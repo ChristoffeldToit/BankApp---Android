@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Sisonke Bank App</string>
+    <string name="textview">d</string>
+
+    //Spinner to select between Savings and Current
+    <string-array name="items_class">
+        <item>Current to Savings</item>
+        <item>Savings to Current</item>
+    </string-array>
+
+</resources>
